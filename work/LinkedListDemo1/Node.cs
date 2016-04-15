@@ -25,7 +25,7 @@ namespace PE19__LinkedLists
         {
             get { return data;  }
         }
-
+		
         public Node Next
         {
             get { return next; }

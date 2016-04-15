@@ -37,7 +37,7 @@ namespace PE19__LinkedLists
 
             // now at end of the list
             current.Next = newNode; // add the new node at the end of the list
-            count++;
+            count++; // We add the count on addition, instead of calculating it each time.
         }
 
         // traverse the list, printing all data
@@ -64,5 +64,46 @@ namespace PE19__LinkedLists
             // still need to list the last node in the list
             Console.WriteLine(current);
         }
+
+		// Assignment information:
+		/*************************
+		
+		Create a method called GetData.
+		It should take an int as a parameter.
+		It should return a string.
+
+		Check to see if index input is invalid.
+
+		**************************/
+		public string GetData(int index)
+		{
+			if ((index < 0) || (index >= count)) { return null; } // If index out of bounds, return null.
+
+			// If index is assumedly valid:
+			// Loop through the list.
+			// Get data.
+			// Return that data.
+
+			if (head == null)
+			{
+				Console.WriteLine("No data in the list");
+				return null;
+			}
+
+			Node current = head;
+			while (current.Next != null)
+			{
+				// list the current node
+				Console.WriteLine(current);
+
+				// move to next node
+				current = current.Next;
+			}
+
+
+
+
+
+		}
     }
 }
