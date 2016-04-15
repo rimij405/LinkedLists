@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PE19__LinkedLists
 {
     // implement a singly linked list
-    class MyLinkedList
+    class LinkedList
     {
         // attributes
         private Node head = null; // initially nothing in the list

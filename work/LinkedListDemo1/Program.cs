@@ -12,7 +12,7 @@ namespace PE19__LinkedLists
         static void Main(string[] args)
         {
             // create a linked list
-            MyLinkedList list = new MyLinkedList();
+            LinkedList list = new LinkedList();
 
             // populate the list
             list.Add("This");
@@ -26,6 +26,9 @@ namespace PE19__LinkedLists
 
             // traverse the list
             list.Traverse();
+
+			// Allows the console to display at the end.
+			Console.ReadLine();
         }
     }
 }
