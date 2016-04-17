@@ -13,6 +13,11 @@ namespace PE19__LinkedLists
         private Node head = null; // initially nothing in the list
         private int count = 0;
 
+		public int Count
+		{
+			get { return this.count; }
+		}
+
         // add an item to the list
         public void Add(string str)
         {
@@ -77,33 +82,27 @@ namespace PE19__LinkedLists
 		**************************/
 		public string GetData(int index)
 		{
-			if ((index < 0) || (index >= count)) { return null; } // If index out of bounds, return null.
+			// If the index is invalid (less than zero or >= the count) return null.
+			if ((index < 0) || (index >= count)) { return null; }
 
-			// If index is assumedly valid:
-			// Loop through the list.
-			// Get data.
-			// Return that data.
-
+			// Else, if index is valid:
+			// Double check to see if the first node is null.
 			if (head == null)
 			{
 				Console.WriteLine("No data in the list");
 				return null;
 			}
 
+			// Loop through, starting at the head node.
 			Node current = head;
-			while (current.Next != null)
+			for(int i = 0; i <= index; i++)
 			{
-				// list the current node
-				Console.WriteLine(current);
-
 				// move to next node
 				current = current.Next;
 			}
 
-
-
-
-
+			// Get and return the collected data.
+			return current.Data;			
 		}
     }
 }
